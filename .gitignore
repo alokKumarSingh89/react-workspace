@@ -37,3 +37,7 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+/apps/vehical/node_modules
+/apps/vehical/public
+/apps/vehical/.cache

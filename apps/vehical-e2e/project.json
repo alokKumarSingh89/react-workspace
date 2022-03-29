@@ -1,0 +1,28 @@
+{
+  "root": "apps/vehical-e2e",
+  "sourceRoot": "apps/vehical-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/vehical-e2e/cypress.json",
+        "devServerTarget": "vehical:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "vehical:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/vehical-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["vehical"]
+}

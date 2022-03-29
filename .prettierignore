@@ -2,3 +2,7 @@
 
 /dist
 /coverage
+
+/apps/vehical/node_modules
+/apps/vehical/public
+/apps/vehical/.cache

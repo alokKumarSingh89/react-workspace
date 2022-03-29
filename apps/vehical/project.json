@@ -1,0 +1,46 @@
+{
+  "root": "apps/vehical",
+  "sourceRoot": "apps/vehical/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/gatsby:build",
+      "options": {
+        "outputPath": "apps/vehical/public",
+        "uglify": true,
+        "color": true,
+        "profile": false
+      },
+      "configurations": {
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/gatsby:server",
+      "options": {
+        "buildTarget": "vehical:build"
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "vehical:build:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/vehical/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/vehical"],
+      "options": {
+        "jestConfig": "apps/vehical/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

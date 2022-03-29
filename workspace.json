@@ -1,4 +1,7 @@
 {
   "version": 2,
-  "projects": {}
+  "projects": {
+    "vehical": "apps/vehical",
+    "vehical-e2e": "apps/vehical-e2e"
+  }
 }
